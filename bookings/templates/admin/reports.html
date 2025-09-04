@@ -1,0 +1,39 @@
+﻿{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Room Booking Reports</h2>
+
+<!-- Date range filter -->
+<form method="get" style="margin-bottom:20px;">
+    <label>From:</label>
+    <input type="date" name="from_date" value="{{ from_date }}">
+    <label>To:</label>
+    <input type="date" name="to_date" value="{{ to_date }}">
+    <button type="submit">Filter</button>
+</form>
+
+<div style="display:flex; gap:50px; margin-top:20px;">
+    <div>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Room Type</th>
+                <th>Rooms Booked</th>
+                <th>Total Hours</th>
+                <th>Earnings</th>
+            </tr>
+            {% for r in room_stats %}
+            <tr>
+                <td>{{ r.type }}</td>
+                <td>{{ r.num_rooms }}</td>
+                <td>{{ r.total_hours|floatformat:2 }}</td>
+                <td>₹{{ r.earning|floatformat:2 }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div>
+        <img src="data:image/png;base64,{{ chart_base64 }}" alt="Room Booking Chart">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "admin/base.html" %}
+{% load static i18n %}
+
+{% block title %}Oasis Inn Dashboard{% endblock %}
+
+{% block branding %}
+<div id="branding">
+    <a href="{% url 'admin:index' %}" class="logo-link">
+        <img src="{% static 'pics/oasisinnlogo.png' %}" alt="Oasis Inn Logo">
+    </a>
+</div>
+{% endblock %}
+
+{% block welcome-msg %}{% endblock %}
+
+{% block userlinks %}
+<div id="user-tools-wrapper">
+    <div id="welcome-user">Welcome, {{ request.user.get_username }}</div>
+    <div class="links-row">
+        <a href="{% url 'admin:index' %}" id="dashboard-btn">Dashboard</a>
+        <a href="{% url 'admin:reports' %}" id="reports-btn">Reports</a>
+        <a href="{% url 'admin:password_change' %}">Change password</a>
+        <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/admin_site.css' %}">
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dashBtn = document.getElementById('dashboard-btn');
+
+        // Only exist on index page
+        const hotelImg = document.getElementById('hotel-image');
+        const dash = document.getElementById('dashboard-content');
+
+        function showOnly(which) {
+            if (!hotelImg && !dash) return; // not on index page
+            if (hotelImg) hotelImg.style.display = (which === 'hotel') ? 'block' : 'none';
+            if (dash) dash.style.display = (which === 'dashboard') ? 'block' : 'none';
+        }
+
+        // Default: ONLY hotel image visible on index
+        showOnly('hotel');
+
+    });
+</script>
+{% endblock %}

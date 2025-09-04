@@ -1,0 +1,9 @@
+<h1>Cancel Booking</h1>
+<p>Booking: {{ booking }}</p>
+<p>Refund Amount: ₹{{ refund }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Cancel</button>
+</form>
+<a href="{% url 'booking_list' %}">Back to List</a>

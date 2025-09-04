@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+            .card:hover {
+                background-color: #e0e7ff;
+            }
+    </style>
+</head>
+<body>
+    <h1>Hotel Admin Dashboard</h1>
+    <div class="dashboard">
+        <a class="card" href="{% url 'booking_list' %}">View All Bookings</a>
+        <a class="card" href="{% url 'booking_create' %}">Create New Booking</a>
+    </div>
+</body>
+</html>

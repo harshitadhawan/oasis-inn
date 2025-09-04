@@ -1,0 +1,48 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div id="hotel-image">
+    <img src="{% static 'pics/hotelpng.png' %}" alt="Oasis Inn" />
+</div>
+
+<div id="dashboard-content" style="display:none;">
+    <h2>Welcome to Oasis Inn Dashboard</h2>
+
+    {% if app_list %}
+    {% for app in app_list %}
+    <h3>{{ app.name }}</h3>
+    <table>
+        <tr>
+            <th>Model name</th>
+            <th>Add link</th>
+            <th>Change or view list link</th>
+        </tr>
+        {% for model in app.models %}
+        <tr>
+            <td>{{ model.name }}</td>
+            <td>
+                {% if model.add_url %}
+                <a href="{{ model.add_url }}">Add</a>
+                {% else %}-{% endif %}
+            </td>
+            <td>
+                {% if model.admin_url %}
+                <a href="{{ model.admin_url }}">
+                    {% if model.view_only %}View{% else %}Change{% endif %}
+                </a>
+                {% else %}-{% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endfor %}
+    {% else %}
+    <p>No apps are registered.</p>
+    {% endif %}
+</div>
+
+<div id="reports-content" style="display:none;">
+    <h2>Reports (coming soon)</h2>
+</div>
+{% endblock %}

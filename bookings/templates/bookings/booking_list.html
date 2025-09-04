@@ -1,0 +1,34 @@
+<h1>All Bookings</h1>
+<a href="{% url 'booking_create' %}">Create Booking</a>
+
+<form method="get">
+    <input type="text" name="room_number" placeholder="Room Number" value="{{ request.GET.room_number }}">
+    <input type="text" name="room_type" placeholder="Room Type" value="{{ request.GET.room_type }}">
+    <button type="submit">Filter</button>
+</form>
+
+<table border="1">
+    <tr>
+        <th>User Email</th>
+        <th>Room</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+    {% for booking in bookings %}
+    <tr>
+        <td>{{ booking.user_email }}</td>
+        <td>{{ booking.room }}</td>
+        <td>{{ booking.start_time }}</td>
+        <td>{{ booking.end_time }}</td>
+        <td>₹{{ booking.price }}</td>
+        <td>
+            <a href="{% url 'booking_edit' booking.id %}">Edit</a> |
+            <a href="{% url 'booking_delete' booking.id %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="6">No bookings found.</td></tr>
+    {% endfor %}
+</table>

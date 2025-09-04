@@ -1,0 +1,77 @@
+﻿/* Header gradient + layout */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #5a3f37, #f4e9cd);
+    color: #fff;
+    padding: 20px 40px;
+}
+
+/* Logo left */
+#branding .logo-link img {
+    height: 120px;
+    width: auto;
+}
+
+/* Right side: welcome above buttons */
+#user-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#welcome-user {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-family: 'Century Gothic'
+}
+
+#user-tools .links-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons: bordered, transparent, blue hover glow */
+#user-tools a,
+#logout-form button {
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    #user-tools a:hover,
+    #logout-form button:hover {
+        border-color: #1e90ff;
+        color: #1e90ff;
+        box-shadow: 0 0 8px rgba(30,144,255,0.6);
+    }
+
+/* Hotel image full width */
+#hotel-image img {
+    width: 106%;
+    height: auto;
+    display: block;
+    margin-top: -65px;
+    margin-left: -30px;
+}
+
+/* Dashboard tables */
+#dashboard-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#dashboard-content th,
+#dashboard-content td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}

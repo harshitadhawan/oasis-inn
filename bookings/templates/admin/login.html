@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <!-- Background animation -->
+    <div class="landscape">
+        <div class="mountain"></div>
+        <div class="mountain mountain-2"></div>
+        <div class="mountain mountain-3"></div>
+        <div class="sun-container sun-container-1">
+        </div>
+        <div class="sun-container">
+            <div class="sun"></div>
+        </div>
+        <div class="cloud"></div>
+        <div class="cloud cloud-1"></div>
+        <div class="sun-container sun-container-reflection">
+            <div class="sun"></div>
+        </div>
+        <div class="light"></div>
+        <div class="light light-1"></div>
+        <div class="light light-2"></div>
+        <div class="light light-3"></div>
+        <div class="light light-4"></div>
+        <div class="light light-5"></div>
+        <div class="light light-6"></div>
+        <div class="light light-7"></div>
+        <div class="water"></div>
+        <div class="splash"></div>
+        <div class="splash delay-1"></div>
+        <div class="splash delay-2"></div>
+        <div class="splash splash-4 delay-2"></div>
+        <div class="splash splash-4 delay-3"></div>
+        <div class="splash splash-4 delay-4"></div>
+        <div class="splash splash-stone delay-3"></div>
+        <div class="splash splash-stone splash-4"></div>
+        <div class="splash splash-stone splash-5"></div>
+        <div class="lotus lotus-1"></div>
+        <div class="lotus lotus-2"></div>
+        <div class="lotus lotus-3"></div>
+        <div class="front">
+            <div class="stone"></div>
+            <div class="grass"></div>
+            <div class="grass grass-1"></div>
+            <div class="grass grass-2"></div>
+            <div class="reed"></div>
+            <div class="reed reed-1"></div>
+        </div>
+    </div>
+
+    {% load static %}
+    <img src="{% static 'pics/oasisinnlogo.png' %}" alt="Logo" class="logo">
+
+    <!-- Login box -->
+    <div class="login-wrapper">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li class="error">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
+
+
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+
+    <button type="submit">Login</button>
+</form>
