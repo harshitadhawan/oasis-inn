@@ -1,4 +1,4 @@
-**Hotel Management System built in Django with SQLite3 Integration**  
+### Hotel Management System built in Django with SQLite3 Integration
 A Hotel Management Web Application built with Django, designed to streamline hotel operations such as managing rooms, bookings, and reports.  
 The system provides both administrators and staff with an easy-to-use interface for handling reservations and monitoring room availability.  
 
