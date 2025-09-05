@@ -11,6 +11,17 @@ The system provides both administrators and staff with an easy-to-use interface 
 
 | All Bookings | Database Schema |
 |-----------------|---------|
-|<img width="1493" height="1080" alt="All Bookings" src="https://github.com/user-attachments/assets/d5628122-766a-449e-89cc-5d6e823b76e4" />
+|<img width="600" height="auto" alt="All Bookings" src="https://github.com/user-attachments/assets/d5628122-766a-449e-89cc-5d6e823b76e4" />
 |<img width="1910" height="375" alt="Tables" src="https://github.com/user-attachments/assets/9346000c-50ce-476e-95fb-d06ce5fd2f60" /> <br> <img width="779" height="568" alt="Bookings Table" src="https://github.com/user-attachments/assets/c552c0e4-494d-4a0e-9c3e-8a0d883c5d31" />|
+
+| Reports | Change Password |
+|-------|-----------|
+|<img width="1920" height="1080" alt="Reports" src="https://github.com/user-attachments/assets/9b2af31d-ad10-49d6-8c26-600c41d18255" />|<img width="1920" height="1080" alt="Change Password" src="https://github.com/user-attachments/assets/096e6b16-11c2-4b61-9d66-8a9805dc7322" />|
+
+| Room Categories | Rooms |
+|-------|-----------|
+|<img width="600" height="auto" alt="Room Data" src="https://github.com/user-attachments/assets/236dc223-d107-4218-998d-f9abeda42a5e" />|<img width="600" height="auto" alt="Room Categories" src="https://github.com/user-attachments/assets/fab9f1ef-5afc-4730-a21f-34190fdc78a1" />|
+
+
+
 
