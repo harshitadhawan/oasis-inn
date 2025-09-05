@@ -65,6 +65,9 @@
     <Compile Include="hotelmng\settings.py" />
     <Compile Include="hotelmng\urls.py" />
     <Compile Include="hotelmng\wsgi.py" />
+    <Compile Include="vercel_wsgi.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -133,6 +136,10 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="rutime.txt" />
+    <Content Include="vercel.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -118,6 +118,7 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "bookings", "static"),
 ]
+ALLOWED_HOSTS = ['.vercel.app', 'localhost']
 
 # For production: where "collectstatic" will put all files
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
