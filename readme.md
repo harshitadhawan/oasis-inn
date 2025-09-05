@@ -27,7 +27,7 @@ Admins can access a list of all bookings and view the database schema that power
 
 | All Bookings | Database Schema |
 |-----------------|---------|
-|<img width="300" height="auto" alt="All Bookings" src="https://github.com/user-attachments/assets/d5628122-766a-449e-89cc-5d6e823b76e4" />|<img width="300" height="auto" alt="Tables" src="https://github.com/user-attachments/assets/9346000c-50ce-476e-95fb-d06ce5fd2f60" /> <br> <img width="300" height="auto" alt="Bookings Table" src="https://github.com/user-attachments/assets/c552c0e4-494d-4a0e-9c3e-8a0d883c5d31" />|
+|<img width="400" height="auto" alt="All Bookings" src="https://github.com/user-attachments/assets/d5628122-766a-449e-89cc-5d6e823b76e4" />|<img width="400" height="auto" alt="Tables" src="https://github.com/user-attachments/assets/9346000c-50ce-476e-95fb-d06ce5fd2f60" /> <br> <img width="400" height="auto" alt="Bookings Table" src="https://github.com/user-attachments/assets/c552c0e4-494d-4a0e-9c3e-8a0d883c5d31" />|
 
 ---
 
